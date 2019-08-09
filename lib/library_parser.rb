@@ -1,3 +1,4 @@
+require 'pry'
 class LibraryParser
   def files
     data_path = File.join(File.dirname(__FILE__), '..', 'db', 'data')
@@ -19,6 +20,7 @@ class LibraryParser
 
     [artist, song, genre]
   end
+  
 
   def call
     files.each do |filename|
@@ -37,4 +39,5 @@ class LibraryParser
     
     song.save
   end
+
 end
